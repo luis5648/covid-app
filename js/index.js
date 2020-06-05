@@ -1,5 +1,5 @@
 //here goes the angular code
-console.log("working!")
+//console.log("working!");
 
 app = angular.module('COVapp', []);
 app.controller('infoCTRL', function($scope, $http){
@@ -11,7 +11,8 @@ app.controller('infoCTRL', function($scope, $http){
             $scope.conf = response.data.confirmed.value;
             $scope.rec = response.data.recovered.value;
             $scope.death = response.data.deaths.value;
+            $scope.act = response.data.confirmed.value - response.data.recovered.value;
         console.log(response.data);
-        });
+    });
     }
 });
