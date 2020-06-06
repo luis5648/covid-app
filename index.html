@@ -1,27 +1,48 @@
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Covid-19 APP</title>
 
-        <!-- Angular js -->
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<head>
+    <meta charset="utf-8">
+    <title>Covid-19 APP</title>
 
-    </head>
-    <body>
-        <h2>estado de covid19</h2>
+    <!-- Angular js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!-- ionic -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
 
-        <div ng-app="COVapp" ng-controller="infoCTRL" class="" id="info">
+</head>
 
-            <input type="text" id="nombrePaís" placeholder="Nombre del país" ng-model="pais" ng-keyup="escribe()">
+<body>
+    <h2>estado de covid19</h2>
 
-            <p>buscando: {{pais}} </p>
-            <p>confirmados: {{conf}}</p>
-            <p>muertos: {{death}}</p>
-            <p>recuperados: {{rec}}</p>
-            <p>activos: {{act}}</p>
+    <div ng-app="COVapp" ng-controller="infoCTRL" class="" id="info">
 
-        </div>
-        <script src="js/index.js" charset="utf-8"></script>
-    </body>
+        <!--
+    <ion-searchbar placeholder="Nombre del país" ng-model="pais" ng-keyup="escribe()"></ion-searchbar>
+
+-->
+        <ion-card>
+            <ion-card-content>
+                <input type="text" placeholder="Nombre del país" ng-model="pais" ng-keyup="escribe()">
+            </ion-card-content>
+        </ion-card>
+
+        <ion-card>
+            <ion-card-content>
+                <p>buscando: {{pais}} </p>
+                <p>confirmados: {{conf}}</p>
+                <p>muertos: {{death}}</p>
+                <p>recuperados: {{rec}}</p>
+                <p>activos: {{act}}</p>
+
+            </ion-card-content>
+        </ion-card>
+
+
+    </div>
+    <script src="js/index.js" charset="utf-8"></script>
+</body>
+
 </html>

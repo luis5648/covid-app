@@ -12,7 +12,8 @@ app.controller('infoCTRL', function($scope, $http){
             $scope.rec = response.data.recovered.value;
             $scope.death = response.data.deaths.value;
             $scope.act = response.data.confirmed.value - response.data.recovered.value;
-        console.log(response.data);
+        
+            console.log(response.data);
     });
     }
 });
